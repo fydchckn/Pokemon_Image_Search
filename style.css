@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-color:grey;
+    overflow-x: hidden;
 }
 .pokeimage_position{
     width: 300px;
@@ -69,5 +70,18 @@ img{
     display: inline-block;
     vertical-align: middle;
     margin: 5px;
+}
+
+@media (max-width:50em) {
+    .title p{
+    text-align: center;
+}
+.input_btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
 }
 
