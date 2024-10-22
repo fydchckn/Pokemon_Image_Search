@@ -1,7 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
 body{
     margin: 0;
     background-color:grey;
     overflow-x: hidden;
+    background-image: url(/images/bg_pokemon.jpg);
+    background-position: center;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .pokeimage_position{
     width: 300px;
@@ -19,11 +27,12 @@ img{
     align-items: center;
     height: 90vh;
     
+    
 }
 .column{
-    background-color: hsla(34, 76%, 90%, 0.74);
-    border-radius: 20px;
-    padding: 10em 3em 10em 3em;   
+    background-color: hsla(34, 76%, 90%, 0.788);
+    border-radius: 100px;
+    padding: 8em 7em 8em 7em;   
     padding-top: 4em;
     display: flex;
     align-items: center;
@@ -45,7 +54,7 @@ img{
     font-size: 1.1em;
     outline: none;
     border-radius: 0.5em;
-   font-family: serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    text-align: center;
 }
 .input_btn button{
@@ -54,7 +63,7 @@ img{
     border-radius: 0.5em;
     border: none;
     font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: 0.3s;
 }
 .input_btn button:hover{
@@ -62,11 +71,11 @@ img{
 }
 
 .title p{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Pokemon Solid', sans-serif;
     font-size: 2.5em;
 }
 .title p::before{
-    content: url(pokeball.svg);
+    content: url(./images/pokeball.svg);
     display: inline-block;
     vertical-align: middle;
     margin: 5px;
@@ -87,9 +96,9 @@ img{
 
 .displayerror{
     font-size: 1.3em;
-    color: red;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: hsla(0, 100%, 50%, 0.753);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     visibility: hidden;
-    max-height: 100%;
+    height: 1.5em; 
 }
 

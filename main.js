@@ -4,10 +4,12 @@ async function fetchdata() {
         const pokeinput = document.querySelector('.pokeinput').value.toLowerCase();
         const response  = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeinput}`);
         const displayerror = document.querySelector(".displayerror");
+        const myimage = document.querySelector('.pokeimage');        
 
-    if (!response) {
+    if (!response.ok) {
         displayerror.textContent = "Not a pokemon name!"; 
         displayerror.style.visibility = "visible";
+        myimage.style.display = "none";
 
     } else {
         const myimage = document.querySelector('.pokeimage');
@@ -22,6 +24,7 @@ async function fetchdata() {
     } catch (error) {
         const displayerror = document.querySelector(".displayerror");
         const myimage = document.querySelector('.pokeimage');
+        
         
         displayerror.textContent = "Not a pokemon name!"; 
         displayerror.style.visibility = "visible";
