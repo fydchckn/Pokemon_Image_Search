@@ -4,7 +4,7 @@ body{
     margin: 0;
     background-color:grey;
     overflow-x: hidden;
-    background-image: url(/images/bg_pokemon.jpg);
+    background-image: url(./images/bg_pokemon.jpg);
     background-position: center;
     background-attachment:fixed;
     background-repeat: no-repeat;
