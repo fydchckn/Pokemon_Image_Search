@@ -1,9 +1,12 @@
 async function fetchdata() {
-    const pokeinput = document.querySelector('.pokeinput').value.toLowerCase();
-    const response  = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeinput}`);
+    
+    try {
+        const pokeinput = document.querySelector('.pokeinput').value.toLowerCase();
+        const response  = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeinput}`);
 
     if (!response) {
-        throw new Error("could not fetch data");  
+        const errors = new Error("not a pokemon name!"); 
+        window.alert(errors); 
 
     } else {
         const myimage = document.querySelector('.pokeimage');
@@ -14,5 +17,9 @@ async function fetchdata() {
         myimage.style.display = "block";
     }
 
+    } catch (error) {
+        window.alert("not a pokemon name!"); 
+    }
+    
 }
 
