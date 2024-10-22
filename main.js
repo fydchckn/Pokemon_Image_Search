@@ -3,10 +3,11 @@ async function fetchdata() {
     try {
         const pokeinput = document.querySelector('.pokeinput').value.toLowerCase();
         const response  = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeinput}`);
+        const displayerror = document.querySelector(".displayerror");
 
     if (!response) {
-        const errors = new Error("not a pokemon name!"); 
-        window.alert(errors); 
+        displayerror.textContent = "Not a pokemon name!"; 
+        displayerror.style.visibility = "visible";
 
     } else {
         const myimage = document.querySelector('.pokeimage');
@@ -15,10 +16,16 @@ async function fetchdata() {
 
         myimage.src = pokemonimage;
         myimage.style.display = "block";
+        displayerror.style.visibility = "hidden";
     }
 
     } catch (error) {
-        window.alert("not a pokemon name!"); 
+        const displayerror = document.querySelector(".displayerror");
+        const myimage = document.querySelector('.pokeimage');
+        
+        displayerror.textContent = "Not a pokemon name!"; 
+        displayerror.style.visibility = "visible";
+        myimage.style.display = "none";
     }
     
 }

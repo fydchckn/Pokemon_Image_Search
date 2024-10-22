@@ -85,3 +85,11 @@ img{
 
 }
 
+.displayerror{
+    font-size: 1.3em;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    visibility: hidden;
+    max-height: 100%;
+}
+
